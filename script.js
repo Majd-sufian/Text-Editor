@@ -47,3 +47,29 @@ function alignText(elem, alignType){
 }
 
 
+function fontText(elem, textTransform){
+  document.getElementById('text-output').style.textTransform = textTransform
+  let fontText =  document.getElementsByClassName('font')
+  for(let i = 0; i < fontText.length; i++){
+    fontText[i].classList.remove('active-d')
+  }
+  elem.classList.add('active-d')
+}
+
+
+
+// function makeLowercase(elem){
+//   elem.classList.toggle('active-d')
+//   document.getElementById('text-output').classList.toggle('text-lowercase')
+// }
+
+// function makeUppercase(elem){
+//   elem.classList.toggle('active-d')
+//   document.getElementById('text-output').classList.toggle('text-uppercase')
+// }
+
+// function makeCapitalize(elem){
+//   elem.classList.toggle('active-d')
+//   document.getElementById('text-output').classList.toggle('text-capitalize')
+// }
+

@@ -15,7 +15,10 @@
           <div class="col">
             <button id="bold" type="button"  class="btn btn-light" onclick="makeBold(this)">Bold</button>
             <button id="italic" type="button"  class="btn btn-light" onclick="makeItalic(this)">Italic</button>
-            <button id="underline" type="button"  class="btn btn-light" onclick="makeUnderline(this)">Underline</button>
+            <button id="underline" type="button"  class="btn btn-light mr-4" onclick="makeUnderline(this)">Underline</button>
+            <button id="lowercase" type="button"  class="font btn btn-light" onclick="fontText(this, 'lowercase')">Lowercase</button>
+            <button id="uppercase" type="button"  class="font btn btn-light" onclick="fontText(this, 'uppercase')">Uppercase</button>
+            <button id="capitalize" type="button"  class="font btn btn-light mr-4" onclick="fontText(this, 'capitalize')">Capitalize</button>
             <button id="left-align" type="button"  class="align btn btn-light" onclick="alignText(this ,'left')"><i class="fas fa-align-left"></i></button>
             <button id="center-align" type="button"  class="align btn btn-light" onclick="alignText(this ,'center')"><i class="fas fa-align-center"></i></button>
             <button id="right-align" type="button"  class="align btn btn-light" onclick="alignText(this ,'right')"><i class="fas fa-align-right"></i></button>
