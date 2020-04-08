@@ -1,11 +1,3 @@
-  /**
- * DONE: Update the text in the "Formatted Text" section as a user types in the textarea
- * DONE: Add a .bold, .italic classes to "Formatted Text" when the appropriate button is clicked
- * document: Add an .underline class to "Formatted Text" when Underline button is clicked
- * DONE: Toggle the align style for "Formatted Text" when the appropriate button is clicked
- */
-
-
 updateText = () => {
   let textInput = document.getElementById("text-input").value
   document.getElementById("text-output").innerHTML = textInput;
@@ -55,3 +47,15 @@ fontText = (elem, textTransform) => {
   }
   elem.classList.add('active-d')
 }
+
+const results = document.querySelector("#text-input")
+
+let userPromise = fetch('http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7')
+userPromise.then((response) => response.json())
+.then((data) => {
+  data.Search.forEach((result) => {
+    const title =  result.Title
+    results.insertAdjacentHTML("beforeend", title);
+  })
+})
+
